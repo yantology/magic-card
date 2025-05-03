@@ -173,14 +173,16 @@ function RouteComponent() {
   // --- Render Logic ---
 
   return (
-    // Main container div, using Flexbox for centering content
-    <div className="flex flex-col items-center justify-center min-h-screen gap-10 p-4 overflow-hidden">
-      {/* Title Text */}
-      <h1 className="text-xl font-bold text-center">Pilih salah satu kartu dan ingat baik baik</h1>
+    // Main container div: Added gradient background, text color, padding
+    <div className="flex flex-col items-center justify-center min-h-screen gap-10 p-4 overflow-hidden bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 text-gray-800">
+      {/* Title Text: Increased size, added shadow */}
+      <h1 className="text-3xl font-bold text-center text-indigo-800 drop-shadow-sm">
+        Pilih salah satu kartu dan ingat baik baik
+      </h1>
 
-      {/* Container for the animated cards */}
+      {/* Container for the animated cards: Added subtle shadow and rounded corners */}
       {/* Height is fixed (h-72) to prevent layout shifts during animations */}
-      <div className={`relative w-full h-72 flex items-center justify-center gap-4 flex-wrap`}>
+      <div className={`relative w-full h-72 flex items-center justify-center gap-4 flex-wrap p-2 rounded-lg shadow-inner bg-white/30 backdrop-blur-sm`}>
         {/* AnimatePresence handles the enter/exit animations, especially for the removed card */}
         <AnimatePresence>
           {/* Map over the currently visible cards to render each one */}
@@ -205,9 +207,11 @@ function RouteComponent() {
                 // Apply rotation when centered to fan the cards out
                 rotate: areCentered ? index * 8 - ((visibleCards.length -1) * 4) : 0,
                 // Slightly scale up cards when centered
-                scale: areCentered ? 1.1 : 1,
+                scale: areCentered ? 1.15 : 1, // Slightly increased scale when centered
                 // Adjust z-index when centered so cards overlap correctly
                 zIndex: areCentered ? index : 0,
+                // Add a subtle shadow when cards are spread out
+                boxShadow: areCentered ? "0px 10px 20px rgba(0, 0, 0, 0.2)" : "0px 4px 8px rgba(0, 0, 0, 0.1)",
               }}
               // 'exit' defines the animation when the component is removed (handled by AnimatePresence)
               exit={{
@@ -238,8 +242,10 @@ function RouteComponent() {
                   // It's often good practice to set the initial transform directly via style
                   // to match the 'animate' state, ensuring smooth transitions.
                   transform: areCentered
-                      ? `translateX(-50%) translateY(-50%) rotate(${index * 8 - ((visibleCards.length -1) * 4)}deg) scale(1.1)`
+                      ? `translateX(-50%) translateY(-50%) rotate(${index * 8 - ((visibleCards.length -1) * 4)}deg) scale(1.15)`
                       : `translateX(0%) translateY(0%) rotate(0deg) scale(1)`,
+                  // Ensure initial shadow matches the non-centered state
+                  boxShadow: areCentered ? "0px 10px 20px rgba(0, 0, 0, 0.2)" : "0px 4px 8px rgba(0, 0, 0, 0.1)",
               }}
             >
               {/* Render the actual Card component */}
@@ -253,9 +259,9 @@ function RouteComponent() {
         </AnimatePresence>
       </div>
 
-      {/* Description Text Area */}
+      {/* Description Text Area: Increased font size */}
       {/* Fixed height (h-6) prevents layout shifts when text changes */}
-      <div className="text-center mb-4 h-6">
+      <div className="text-center mb-4 h-6 text-lg font-medium text-purple-700">
         {/* AnimatePresence with mode="wait" ensures the old text fades out before the new one fades in */}
         <AnimatePresence mode="wait">
           {/* motion.p allows animating the text changes */}
@@ -278,9 +284,9 @@ function RouteComponent() {
         </AnimatePresence>
       </div>
 
-      {/* Control Button */}
+      {/* Control Button: Enhanced styling with gradient, shadow, and transitions */}
       <button
-        className="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="py-3 px-6 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg shadow-md hover:shadow-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 ease-in-out transform hover:-translate-y-1 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-md"
         onClick={handleMagicSequence}
         // Disable the button while the magic sequence is running (stages 1 through 5)
         disabled={cardStage > 0 && cardStage < 6}
