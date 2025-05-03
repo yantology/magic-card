@@ -1,0 +1,11 @@
+🃏 TANTANGAN $100 TERBUKA! 💰
+
+Berani coba "Magic Card Animation" saya? Pilih kartu, ikuti trik sulap digitalnya, dan BUKTIKAN jika saya tidak bisa membaca pikiran Anda!
+
+SAYA JAMIN $100 langsung ke kantong Anda jika triknya gagal!*
+
+Dibangun dengan React + Framer Motion + TailwindCSS. Tunjukkan kalau Anda lebih cerdas dari algoritma saya!
+
+Coba sekarang: [LINK WEBSITE ANDA]
+
+#MagicChallenge #WebDev #FrontEnd

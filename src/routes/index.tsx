@@ -173,11 +173,11 @@ function RouteComponent() {
   // --- Render Logic ---
 
   return (
-    // Main container div: Added gradient background, text color, padding
-    <div className="flex flex-col items-center justify-center min-h-screen gap-10 p-4 overflow-hidden bg-gradient-to-br from-indigo-100 via-purple-100 to-pink-100 text-gray-800">
+    // Main container div: Updated for smoother color transition to footer
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-76px)] gap-10 p-4 overflow-hidden bg-transparent text-gray-800">
       {/* Title Text: Increased size, added shadow */}
       <h1 className="text-3xl font-bold text-center text-indigo-800 drop-shadow-sm">
-        Pilih salah satu kartu dan ingat baik baik
+        Pick a card and remember it well
       </h1>
 
       {/* Container for the animated cards: Added subtle shadow and rounded corners */}
@@ -279,7 +279,7 @@ function RouteComponent() {
             {cardStage === 3 && "Making one disappear..."}
             {cardStage === 4 && "Shuffling the cards..."}
             {cardStage === 5 && "Returning the cards..."}
-            {cardStage === 6 && "Is your card still here?"}
+            {cardStage === 6 && "Is your card still here? If I failed to read your mind, you win $100!"}
           </motion.p>
         </AnimatePresence>
       </div>
@@ -294,6 +294,18 @@ function RouteComponent() {
         {/* Change button text based on whether the trick is ready to start or needs resetting */}
         {cardStage === 0 ? "Start the Magic" : "Reset trick"}
       </button>
+      
+      {/* Add disclaimer about the $100 offer */}
+      {cardStage === 6 && (
+        <motion.p 
+          className="mt-4 text-sm text-indigo-600 italic max-w-md text-center"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          *The $100 offer is just part of the magic experience. It's all for fun!
+        </motion.p>
+      )}
     </div>
   );
 }

@@ -1,0 +1,33 @@
+🎩✨ **PROYEK TERBARU: MAGIC CARD ANIMATION** ✨🎩
+
+Dengan bangga saya memperkenalkan proyek terbaru saya: sebuah animasi trik sulap kartu interaktif yang dibangun menggunakan React, TypeScript, Framer Motion, dan Tailwind CSS!
+
+**Tentang Proyek:**
+Magic Card Animation adalah simulasi trik sulap digital yang mengajak pengguna untuk memilih satu kartu, mengingat kartu tersebut, lalu menyaksikan serangkaian animasi yang mengesankan. Kartu-kartu akan berkumpul di tengah, terbalik, satu kartu menghilang secara acak, lalu kartu-kartu yang tersisa akan diacak dan kembali ke posisi awal.
+
+Tantangannya: apakah kartu yang Anda pilih masih ada di akhir trik? Jika saya gagal menebak pikiran Anda, Anda menang $100!* 😉
+
+**Fitur Teknis:**
+- Animasi yang mulus menggunakan Framer Motion
+- Routing dengan TanStack Router
+- Styling dengan Tailwind CSS
+- Fully responsive design
+- Penggunaan TypeScript untuk type safety
+
+**Stack Teknologi:**
+- React + TypeScript
+- Vite sebagai build tool
+- Framer Motion untuk animasi
+- Tailwind CSS untuk styling
+- TanStack Router untuk routing
+
+Proyek ini merupakan demonstrasi dari kemampuan modern web animation dan pengalaman pengguna yang interaktif.
+
+Demo langsung: [LINK WEBSITE ANDA]
+GitHub: [LINK GITHUB ANDA]
+
+Bagikan pendapat Anda atau saran tentang proyek ini di kolom komentar! 👇
+
+#WebDevelopment #ReactJS #FramerMotion #TailwindCSS #FrontendDevelopment #WebAnimation #TypeScript #MagicTrick #InteractiveWeb #UserExperience
+
+*Disclaimer: Tawaran $100 hanyalah bagian dari pengalaman magic, semua untuk kesenangan!
