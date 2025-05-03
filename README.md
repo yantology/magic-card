@@ -1,3 +1,5 @@
+![Magic Card Animation Screenshot](https://github.com/yantology/magic-card/blob/master/public/homepage.png?raw=true)
+
 # Magic Card Animation
 
 This project demonstrates a "magic trick" animation using React, Framer Motion, and Tailwind CSS. It displays a set of cards that go through an animated sequence simulating a card trick.
