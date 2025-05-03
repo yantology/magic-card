@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 
 // Card suit mapping
 export const CARD_SUITS = {
-  heart: { symbol: "♥️", colorClass: "text-red-600" },
-  diamond: { symbol: "♦️", colorClass: "text-red-600" },
+  heart: { symbol: "♥️", colorClass: "text-red-800" },
+  diamond: { symbol: "♦️", colorClass: "text-red-800" },
   spade: { symbol: "♠️", colorClass: "text-black" },
   club: { symbol: "♣️", colorClass: "text-black" },
 };

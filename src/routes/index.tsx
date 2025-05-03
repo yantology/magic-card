@@ -68,8 +68,9 @@ function RouteComponent() {
   const initialCards: {rank: CardRank, suit: SuitType, id: string}[] = [
     { rank: "A", suit: "heart", id: "card-1" },
     { rank: "K", suit: "diamond", id: "card-2" },
+    { rank: "J", suit: "spade", id: "card-4" },
     { rank: "Q", suit: "club", id: "card-3" },
-    { rank: "J", suit: "spade", id: "card-4" }
+    
   ];
 
   // Store the ranks (A, K, Q, J) from the initial cards for later shuffling logic
